@@ -7,7 +7,7 @@
 제출 순서는 다음과 같습니다.
 
 1. 이 저장소를 본인 GitHub 계정으로 Fork합니다.
-2. 본인 학번과 이름으로 폴더를 만듭니다.
+2. 본인 순번과 이름으로 제출 폴더를 만듭니다.
 3. 과제 파일을 본인 폴더 안에 넣습니다.
 4. 변경 내용을 commit하고 push합니다.
 5. 원본 저장소로 Pull Request를 보냅니다.
@@ -30,26 +30,34 @@ https://github.com/philipdekim-OnD01/2026-spring-advanced-design-theory-final-su
 
 Git 명령어 사용이 어렵다면 GitHub Desktop을 사용해도 됩니다.
 
-## 본인 제출 폴더 이름 규칙
+## 제출 폴더 이름 규칙
 
 반드시 본인 폴더를 하나 만들고, 그 안에 과제를 넣어 주세요.
 
 폴더 이름은 아래 형식을 사용합니다.
 
 ```text
-학번_영문이름
+번호.이름.최종과제.프로젝트명
 ```
 
-예시:
+교수자 예시 자료는 `00`번으로 이미 올라와 있습니다.
 
 ```text
-2026123456_Gildong-Hong
+00.김임환교수.최종과제.SSD.on.RSP.Project
+```
+
+학생은 `01`번부터 순서대로 작성합니다.
+
+```text
+01.홍길동.최종과제.My.Project
+02.김철수.최종과제.Raspberry.Pi.Project
 ```
 
 주의사항:
 
-- 이름은 영문으로 작성합니다.
+- 번호는 두 자리로 작성합니다. 예: `01`, `02`, `03`
 - 폴더 이름에 공백을 넣지 않습니다.
+- 프로젝트명에는 공백 대신 `.`을 사용합니다.
 - 다른 학생의 폴더를 수정하거나 삭제하지 않습니다.
 
 ## 권장 제출 구조
@@ -58,7 +66,11 @@ Git 명령어 사용이 어렵다면 GitHub Desktop을 사용해도 됩니다.
 
 ```text
 .
-|-- 2026123456_Gildong-Hong/
+|-- 00.김임환교수.최종과제.SSD.on.RSP.Project/
+|   |-- README.md
+|   |-- project-page/
+|   `-- RSP_SSD_LAB/
+|-- 01.홍길동.최종과제.My.Project/
 |   |-- README.md
 |   |-- report.pdf
 |   |-- source/
@@ -98,13 +110,13 @@ cd 2026-spring-advanced-design-theory-final-submite
 
 ### 3. 본인 폴더 만들기
 
-아래 예시처럼 본인 학번과 영문 이름으로 폴더를 만듭니다.
+아래 예시처럼 본인 순번, 이름, 프로젝트명을 사용해 폴더를 만듭니다.
 
 ```bash
-mkdir 2026123456_Gildong-Hong
+mkdir 01.홍길동.최종과제.My.Project
 ```
 
-`2026123456_Gildong-Hong` 부분은 반드시 본인의 학번과 이름으로 바꾸세요.
+`01.홍길동.최종과제.My.Project` 부분은 반드시 본인의 순번, 이름, 프로젝트명으로 바꾸세요.
 
 ### 4. 과제 파일 넣기
 
@@ -113,9 +125,9 @@ mkdir 2026123456_Gildong-Hong
 예시:
 
 ```text
-2026123456_Gildong-Hong/report.pdf
-2026123456_Gildong-Hong/source/main.py
-2026123456_Gildong-Hong/figures/result.png
+01.홍길동.최종과제.My.Project/report.pdf
+01.홍길동.최종과제.My.Project/source/main.py
+01.홍길동.최종과제.My.Project/figures/result.png
 ```
 
 다른 학생의 폴더는 수정하지 마세요.
@@ -127,13 +139,13 @@ mkdir 2026123456_Gildong-Hong
 ```bash
 git status
 git add .
-git commit -m "Submit assignment - 학번 이름"
+git commit -m "Submit final project - 번호 이름"
 ```
 
 예시:
 
 ```bash
-git commit -m "Submit assignment - 2026123456 Gildong Hong"
+git commit -m "Submit final project - 01 홍길동"
 ```
 
 ### 6. 본인 Fork로 올리기
@@ -160,13 +172,13 @@ git push
 5. Pull Request 제목은 아래 형식으로 작성합니다.
 
    ```text
-   [과제 제출] 학번 이름
+   [최종과제 제출] 번호 이름
    ```
 
    예시:
 
    ```text
-   [과제 제출] 2026123456 Gildong Hong
+   [최종과제 제출] 01 홍길동
    ```
 
 6. **Create pull request**를 누릅니다.
@@ -203,7 +215,7 @@ Pull Request를 만든 뒤 다음을 확인하세요.
 - 원본 저장소의 **Pull requests** 탭에 본인의 Pull Request가 보이는지 확인합니다.
 - Pull Request 파일 목록에 본인 폴더가 보이는지 확인합니다.
 - 최종 과제 파일이 모두 포함되어 있는지 확인합니다.
-- Pull Request 제목이 `[과제 제출] 학번 이름` 형식인지 확인합니다.
+- Pull Request 제목이 `[최종과제 제출] 번호 이름` 형식인지 확인합니다.
 
 ## 자주 발생하는 문제
 
@@ -228,7 +240,7 @@ Pull Request를 만든 뒤 다음을 확인하세요.
 즉시 교수자에게 연락하고 아래 정보를 함께 보내세요.
 
 - 이름
-- 학번
+- 제출 번호
 - 잘못 제출한 저장소 또는 Pull Request 주소
 - 올바른 저장소 또는 Pull Request 주소
 
